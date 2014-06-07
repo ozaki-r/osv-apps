@@ -1,0 +1,9 @@
+include ../unix/Makefile
+
+CFLAGS += -fPIC
+
+all: $(BUILD)/micropython.so
+
+$(BUILD)/micropython.so: $(OBJ)
+	$(ECHO) "CC $@"
+	$(Q)$(CC) $(CFLAGS) -shared -o $@ $(OBJ) $(LIBS)

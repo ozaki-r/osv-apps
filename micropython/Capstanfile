@@ -1,0 +1,6 @@
+base: cloudius/osv-base
+cmdline: /micropython.so sock-server.py
+build: make
+files:
+    /micropython.so: micropython.so
+    /sock-server.py: sock-server.py

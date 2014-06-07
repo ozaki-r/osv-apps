@@ -1,0 +1,10 @@
+Micro Python, https://github.com/micropython/micropython
+
+How to run
+
+Build and run OSv for micropython:
+  make image=micropython
+  sudo ./script/run.py -n
+
+and then execute curl on another terminal:
+  curl 192.168.122.89

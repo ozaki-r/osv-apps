@@ -1,0 +1,10 @@
+#!/bin/bash
+
+git clone https://github.com/micropython/micropython
+
+cp -r micropython/unix micropython/osv
+cp -f Makefile.micropython micropython/osv/Makefile
+cp -f mpconfigport.mk micropython/osv/mpconfigport.mk
+
+# Use PLT addressing instead of PC-relative one
+sed -i 's/je      nlr_jump_fail/je      nlr_jump_fail@plt/g' micropython/py/nlrx64.S

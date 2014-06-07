@@ -1,0 +1,2 @@
+/tools/micropython.so: ${MODULE_DIR}/micropython.so
+/tools/sock-server.py: ${MODULE_DIR}/sock-server.py
